@@ -1,0 +1,198 @@
+<mjml>
+    <!-- HEAD -->
+    <mj-head>
+        <mj-breakpoint width="575px" />
+        <mj-attributes>
+            <mj-class name="white" color="white" />
+            <mj-class name="blue" color="blue" />
+            <mj-class name="big" font-weight="bold" />
+            <mj-all font-family="Arial" />
+            <mj-all padding="0" />
+        </mj-attributes>
+        <mj-style>
+            p {
+                margin:0;
+                padding:0;
+            }
+        </mj-style>
+        <mj-style>
+        @media (min-width: 480px) {
+            .button {
+                font-size: 8px;
+            }
+        }
+        </mj-style>
+        <mj-style>
+            @media (min-width: 600px) {
+                .button {
+                    font-size: 10px;
+                }
+            }
+        </mj-style>
+        <mj-style>
+            @media (min-width: 601px) {
+                .button {
+                    font-size: 18px;
+                }
+            }
+        </mj-style>
+    </mj-head>
+    <!-- BODY -->
+    <mj-body>
+        <!--HEADER-->
+        <mj-section padding="20px 10px">
+            <!--LOGO-->
+            <mj-column>
+                <mj-image align="left" width="100px" src="https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FG%2F01%2Fx-locale%2Fcs%2Fte%2Flogo.png&t=1668883854&ymreqid=0cc671f4-17ac-dba6-1c66-970003010a00&sig=CbNlH4etPLIPPYIqNE4voQ--~D" />
+            </mj-column>
+            <!--TEXT-->
+            <mj-column vertical-align="top">
+                <mj-text align="right" font-size="18px">
+                    <p style="margin-top:0px;">Order Confirmation</p>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!--TEXT-->
+        <mj-section padding="20px 10px">
+        <!--HELLO-->
+            <mj-column>
+                <mj-text>
+                    <p style="color:#CC6600; font-size:18px; padding-bottom:20px;">Hello Robin,</p>
+                    <p style="padding:5px 0;">Thank you for shopping with us. We’ll send a confirmation when your items ship</p>
+                    <p style="padding:5px 0;">Your purchase has been divided into 2 orders.</p>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!--ORDER 1-->
+        <!--TEXT-->
+        <mj-section padding="5px 10px 20px 10px">
+            <mj-column>
+                <mj-text align="left">
+                    <p style="font-size:18px;color:#CC6600;margin-top:0; padding-bottom:10px;">Order 1 of 2</p>
+                    <p>Order <a href="#">#111-0000000-2222222</a></p>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!--ORDER 1-->
+        <!--INFO-->
+        <mj-section padding="10px 40px" border-top="3px solid #cbcfd4" background-color="#efefef">
+            <mj-column padding="10px 20px">
+                <!--INFO-->
+                <mj-text line-height="15px" padding-bottom="10px">
+                    <p>Arriving:<p>
+                    <p style="color:#009900; font-weight:bold;">Tuesday, April 5 -</p>
+                    <p style="color:#009900; font-weight:bold;">Friday, April 8</p>
+                </mj-text>
+                <mj-button css-class="button" href="#" align="left" background-color="#ffa723" color="#111111">
+                    View or manage order
+                </mj-button>
+            </mj-column>
+            <!--SHIP-->
+            <mj-column padding="10px 20px">
+                <mj-text>
+                    <p>Ship to:</p>
+                    <p style="font-weight:bold; padding-top:2px;">Robin</p>
+                    <p style="font-weight:bold; padding-top:2px;">ATLANTIS, NA</p>
+                    <p style="font-weight:bold;padding:10px 0px;">Order Total: <span style="font-size:11px">$22.88</span></p>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!--ORDER 2-->
+        <!--TEXT-->
+        <mj-section padding="30px 10px 20px 10px">
+            <mj-column>
+                <mj-text align="left">
+                    <p style="font-size:18px;color:#CC6600;margin-top:0; padding-bottom:10px;">Order 2 of 2</p>
+                    <p>Order <a href="#">#010-0101010-0101010</a></p>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!--ORDER 2-->
+        <!--INFO-->
+        <mj-section padding="10px 40px" border-top="3px solid #cbcfd4" background-color="#efefef">
+            <mj-column padding="10px 20px">
+                <!--INFO-->
+                <mj-text line-height="15px" padding-bottom="10px">
+                    <p>Arriving:<p>
+                    <p style="color:#009900; font-weight:bold;">Friday, April 1</p>
+                </mj-text>
+                <mj-button css-class="button" href="#" align="left" background-color="#ffa723" color="#111111">
+                    View or manage order
+                </mj-button>
+            </mj-column>
+            <!--SHIP-->
+            <mj-column padding="10px 20px">
+                <mj-text>
+                    <p>Ship to:</p>
+                    <p style="font-weight:bold; padding-top:2px;">Robin</p>
+                    <p style="font-weight:bold; padding-top:2px;">ATLANTIS, NA</p>
+                    <p style="font-weight:bold;padding:10px 0px;">Order Total: <span style="font-size:11px">$20.82</span></p>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+         <!--AGAIN-->
+        <mj-section padding="40px 10px">
+            <mj-column>
+                <mj-text>
+                    <p style="font-size:16px; padding-bottom:20px;">We hope to see you again soon.</p>
+                    <p style="font-weight:bold;">Amazon.com</p>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!--ALSO BOUGHT-->
+        <mj-section>
+        <!--TITLE-->
+            <mj-column padding="10px 20px">
+                <mj-text>
+                    <mj-text>
+                        <h2 style="color:#CC6600;">Customers Who Bought Items in Your Order Also Bought</h2>
+                    </mj-text>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+         <!--IMAGE SECTION-->
+        <mj-section>
+            <!--IMAGE-->
+            <mj-column>
+                <mj-image src="https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F51TsyvANoHL._AC_SX80_SY80_SS80_.jpg&t=1668883854&ymreqid=0cc671f4-17ac-dba6-1c66-970003010a00&sig=JlsEUJBgTlTNhP8K0EaoNg--~D" width="80px" >
+            </mj-column>
+            <!--TEXT-->
+             <mj-column>
+                <mj-text align="left" padding-top="10px">
+                    <p style="color:#868686">Clear Care Bonus Pack (32 Ounce)</p>
+                    <br/>
+                    <p style="color:#868686">$23.50</p>
+                </mj-text>
+            </mj-column>
+             <!--IMAGE-->
+             <mj-column>
+                <mj-image src="https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F71baomHTQ%2BL._AC_SX80_SY80_SS80_.jpg&t=1668883854&ymreqid=0cc671f4-17ac-dba6-1c66-970003010a00&sig=XhSwGCw5Dj1UmctVmnFw3Q--~D" width="80px">
+            </mj-column>
+             <!--TEXT-->
+             <mj-column>
+                <mj-text align="left" padding-top="10px">
+                    <p style="color:#868686">PuriLens Plus Preservative Free</p>
+                    <br/>
+                    <p style="color:#868686">$39.95</p>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!--FOOTER-->
+        <mj-section padding-top="30px">
+            <mj-column>
+                <mj-text font-size="11px">
+                    <p style="color: #868686; padding-bottom:10px;">
+                        The payment for your invoice is processed by Amazon Payments, Inc. P.O. Box 81226 Seattle, Washington 98108-1226. If you need more information, please contact (866) 216-1075
+                    </p>
+                    <p style="color:#868686; padding-bottom:10px;">
+                        By placing your order, you agree to Amazon.com’s <a href="#" style="text-decoration:none;">Privacy Notice</a> and <a href="#" style="text-decoration:none;">Conditions of Use</a>. Unless otherwise noted, items sold by Amazon.com are subject to sales tax in select states in accordance with the applicable laws of that state. If your order contains one or more items from a seller other than Amazon.com, it may be subject to state and local sales tax, depending upon the seller's business policies and the location of their operations. Learn more about <a href="#" style="text-decoration:none;">tax and seller information</a>.
+                    </p>
+                    <p style="color:#868686; padding-bottom:10px;">
+                        This email was sent from a notification-only address that cannot accept incoming email. Please do not reply to this message.
+                    </p>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+
+    </mj-body>
+</mjml>
