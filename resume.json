@@ -1,0 +1,129 @@
+{
+  "basics": {
+    "name": "Robin Punnoose",
+    "label": "Full Stack Web Developer",
+    "image": "",
+    "email": "robin.punnoose@protonmail.com",
+    "phone": "",
+    "url": "https://robinpunn.com",
+    "summary": "",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": ""
+    },
+    "profiles": [{
+      "network": "LinkedIn",
+      "username": "Robin Punnoose",
+      "url": "www.linkedin.com/in/robin-punnoose"
+    }]
+  },
+  "work": [{
+    "name": "",
+    "position": "",
+    "url": "",
+    "startDate": "",
+    "endDate": "",
+    "summary": "",
+    "highlights": [
+      ""
+    ]
+  }],
+  "volunteer": [{
+    "organization": "",
+    "position": "",
+    "url": "",
+    "startDate": "",
+    "endDate": "",
+    "summary": "",
+    "highlights": [
+      ""
+    ]
+  }],
+  "education": [{
+    "institution": "",
+    "url": "",
+    "area": "",
+    "studyType": "",
+    "startDate": "",
+    "endDate": "",
+    "score": "",
+    "courses": [
+      ""
+    ]
+  }],
+  "awards": [{
+    "title": "",
+    "date": "",
+    "awarder": "",
+    "summary": ""
+  }],
+  "certificates": [{
+    "name": "",
+    "date": "",
+    "issuer": "",
+    "url": ""
+  }],
+  "publications": [{
+    "name": "",
+    "publisher": "",
+    "releaseDate": "",
+    "url": "",
+    "summary": ""
+  }],
+  "skills": [
+    {
+        "name": "Front-End",
+        "level": "",
+        "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+        ]
+    },
+    {
+        "name": "Back-End",
+        "level": "",
+        "keywords": [
+            "Node.js",
+            "SQL",
+            "GraphQL"
+        ]
+    }
+    ],
+  "languages": [{
+    "language": "English",
+    "fluency": "Native speaker"
+  }],
+  "interests": [{
+    "name": "",
+    "keywords": [
+      "",
+      ""
+    ]
+  }],
+  "references": [{
+    "name": "",
+    "reference": ""
+  }],
+  "projects": [{
+    "name": "Project",
+    "description": "Description…",
+    "highlights": [
+      ""
+    ],
+    "keywords": [
+      "HTML"
+    ],
+    "startDate": "",
+    "endDate": "",
+    "url": "https://project.com/",
+    "roles": [
+      ""
+    ],
+    "entity": "",
+    "type": ""
+  }]
+}
