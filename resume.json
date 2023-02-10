@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Robin Punnoose",
-    "label": "Full Stack Web Developer",
+    "label": "Web Developer",
     "image": "",
     "email": "robin.punnoose@protonmail.com",
     "phone": "",
     "url": "https://robinpunn.com",
-    "summary": "",
+    "summary": "Experienced healthcare professional with a Bachelor's degree in Nursing seeking to transition to a career in web development. Using online resources to constantly grow as a developer. Strong problem-solving skills, attention to detail, and the ability to quickly adapt to new technologies. Excellent communication and writing skills, effectively conveying thoughts and ideas. Eager to learn new programming languages, frameworks, and libraries to meet employer needs.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -14,116 +14,155 @@
       "countryCode": "",
       "region": ""
     },
-    "profiles": [{
-      "network": "LinkedIn",
-      "username": "Robin Punnoose",
-      "url": "www.linkedin.com/in/robin-punnoose"
-    }]
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Robin Punnoose",
+        "url": "www.linkedin.com/in/robin-punnoose"
+      },
+      {
+        "network": "GitHub",
+        "username": "robinpunn",
+        "url": "www.github.com/robinpunn"
+      }
+    ]
   },
-  "work": [{
-    "name": "",
-    "position": "",
-    "url": "",
-    "startDate": "",
-    "endDate": "",
-    "summary": "",
-    "highlights": [
-      ""
-    ]
-  }],
-  "volunteer": [{
-    "organization": "",
-    "position": "",
-    "url": "",
-    "startDate": "",
-    "endDate": "",
-    "summary": "",
-    "highlights": [
-      ""
-    ]
-  }],
-  "education": [{
-    "institution": "",
-    "url": "",
-    "area": "",
-    "studyType": "",
-    "startDate": "",
-    "endDate": "",
-    "score": "",
-    "courses": [
-      ""
-    ]
-  }],
-  "awards": [{
-    "title": "",
-    "date": "",
-    "awarder": "",
-    "summary": ""
-  }],
-  "certificates": [{
-    "name": "",
-    "date": "",
-    "issuer": "",
-    "url": ""
-  }],
-  "publications": [{
-    "name": "",
-    "publisher": "",
-    "releaseDate": "",
-    "url": "",
-    "summary": ""
-  }],
-  "skills": [
+  "work": [
     {
-        "name": "Front-End",
-        "level": "",
-        "keywords": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-        ]
+      "name": "Freelance Web Developer",
+      "position": "Self study",
+      "url": "",
+      "startDate": "01/2023",
+      "endDate": "",
+      "summary": "• Learned the concepts of web development through online resources such as freeCodeCamp, Udemy, ZeroToMastery, and Alchemy University • Learned the basics of front-end web development through freeCodeCamp's 'Responsive Front-end Design' and 'JavaScript Algorithms and Data Structures' certifications • Completed ZeroToMastery's 'Complete Web Developer' course finishing the final 'Smartbrain' project which incorporated a React front-end, Express.js server, and Postgresql database • Maintained a WordPress blog writing posts about key topics • Converted WordPress to a headless Next.js blog",
+      "highlights": [""]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "",
+      "position": "",
+      "url": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
+      "highlights": [""]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Alchemy University",
+      "url": "https://university.alchemy.com/",
+      "area": "web3",
+      "studyType": "JavaScript, Solidity",
+      "startDate": "",
+      "endDate": "",
+      "score": "",
+      "courses": ["JavaScript Fundamentals, Ethereum Dev. Bootcamp", "Road to web3"]
     },
     {
-        "name": "Back-End",
-        "level": "",
-        "keywords": [
-            "Node.js",
-            "SQL",
-            "GraphQL"
-        ]
+      "institution": "Zero to Mastery",
+      "url": "https://zerotomastery.io/",
+      "area": "Web Development",
+      "studyType": "HTML, CSS, JavaScript, React, Node.js",
+      "startDate": "",
+      "endDate": "",
+      "score": "",
+      "courses": ["Complete Web Developer","Mastering the Coding Interview: Data Structures and Algorithms"]
+    },
+    {
+      "institution": "Academind",
+      "url": "https://academind.com/",
+      "area": "Web Development",
+      "studyType": "HTML, CSS, JavaScript, React, Node.js",
+      "startDate": "",
+      "endDate": "",
+      "score": "",
+      "courses": ["CSS-The Complete Guide","Next.js and React: The Complete Guide"]
+    },
+    {
+      "institution": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/",
+      "area": "Web Development",
+      "studyType": "HTML, CSS, JavaScript",
+      "startDate": "",
+      "endDate": "",
+      "score": "",
+      "courses": ["Responsive Web Design","JavaScript Algorithms and Data Structures"]
     }
-    ],
-  "languages": [{
-    "language": "English",
-    "fluency": "Native speaker"
-  }],
-  "interests": [{
-    "name": "",
-    "keywords": [
-      "",
-      ""
-    ]
-  }],
-  "references": [{
-    "name": "",
-    "reference": ""
-  }],
-  "projects": [{
-    "name": "Project",
-    "description": "Description…",
-    "highlights": [
-      ""
-    ],
-    "keywords": [
-      "HTML"
-    ],
-    "startDate": "",
-    "endDate": "",
-    "url": "https://project.com/",
-    "roles": [
-      ""
-    ],
-    "entity": "",
-    "type": ""
-  }]
+  ],
+  "awards": [
+    {
+      "title": "",
+      "date": "",
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "certificates": [
+    {
+      "name": "",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    }
+  ],
+  "publications": [
+    {
+      "name": "",
+      "publisher": "",
+      "releaseDate": "",
+      "url": "",
+      "summary": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Front-End",
+      "level": "",
+      "keywords": ["HTML", "CSS", "JavaScript, React, Next.js, Bootstrap, Tailwind"]
+    },
+    {
+      "name": "Back-End",
+      "level": "",
+      "keywords": ["Node.js", "SQL", "GraphQL", "WordPress"]
+    },
+    {
+      "name": "More",
+      "level": "",
+      "keywords": ["Git/GitHub", "Figma", "Email Frameworks"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "",
+      "keywords": ["", ""]
+    }
+  ],
+  "references": [
+    {
+      "name": "",
+      "reference": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "",
+      "description": "",
+      "highlights": [""],
+      "keywords": [""],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [""],
+      "entity": "",
+      "type": ""
+    }
+  ]
 }
