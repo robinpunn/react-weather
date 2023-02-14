@@ -1,8 +1,14 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+}
+
+.App {
+  margin: 0 auto;
+  padding: 1.25rem 8rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  background: linear-gradient(to right, #5bcbff, #511dfd);
+  max-width: 45rem;
 }
 
 .logo {
@@ -27,16 +33,9 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* @media (max-width: 40rem) {
+  .App {
+    max-width: screen;
   }
-}
+} */
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
