@@ -1,76 +1,86 @@
 /*Inputs container*/
 .inputs {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1.25rem 0;
 }
 
 /*search bar container*/
 .search {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-    width: 75%;
-    margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  margin-left: 1rem;
 }
 
 /*search bar*/
 .search-bar {
-    font-size: 1.25rem;
-    font-weight: 300;
-    padding: 0.5rem;
-    width: 100%;
-    text-transform: capitalize;
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    outline: none;
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0.5rem;
+  width: 100%;
+  text-transform: capitalize;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  outline: none;
 }
 
 .search-bar::placeholder {
-    color: #a0aec0;
-    text-transform: lowercase;
+  color: #a0aec0;
+  text-transform: lowercase;
 }
 
 /*search bar icons*/
 .search-icon {
-    color: #fff;
-    cursor: pointer;
-    margin: 0 0.5rem;
-    transition: all 0.2s ease-out;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: all 0.2s ease-out;
 }
 
 .mag {
-    margin-left: 0.75rem;
+  margin-left: 0.75rem;
 }
 
 .search-icon:hover {
-    color: #9200ba;
-    transform: scale(1.25);
+  color: #9200ba;
+  transform: scale(1.25);
 }
 
 /*temperature container*/
 .temp {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
 }
 
 /*temperature buttons*/
 .temp-button {
-    color: white;
-    font-size: 1.25rem;
-    background-color: inherit;
-    border: none;
-    cursor: pointer;
+  color: white;
+  font-size: 1.25rem;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
 }
 
 .separator {
-    color: white;
-    font-size: 1.25rem;
-    font-weight: 300;
-    margin: 0 0.5rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0.5rem;
+}
+
+@media screen and (min-width: 46rem) {
+  .inputs {
+    flex-direction: row;
+  }
+  .search {
+    width: 75%;
+  }
 }
