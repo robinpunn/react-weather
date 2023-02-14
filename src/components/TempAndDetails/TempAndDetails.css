@@ -1,0 +1,85 @@
+/*description text container*/
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.25rem;
+  color: aqua;
+}
+
+/*weather details container*/
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+/*icon based on current weather*/
+.weather-icon {
+  width: 5rem;
+  padding: 0;
+}
+/*current temperature*/
+.weather-number {
+  font-size: 3rem;
+  margin: 0.25rem;
+}
+/*weather details container: real, humidity,wind*/
+.weather-stats {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+/*container for individual detail*/
+.weather-stat-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  font-weight: 100;
+}
+/*weather detail icon*/
+.weather-stat-icon {
+  margin-right: 0.25rem;
+}
+/*weather detail text*/
+.weather-span {
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+/*container for rise/set + high/low*/
+.range-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.75rem;
+  color: #fff;
+}
+.range-text {
+  font-weight: 100;
+}
+.range-value {
+  margin-left: 0.25rem;
+  font-weight: 400;
+}
+.range-separator {
+  font-weight: 300;
+  margin: 0.5rem;
+  padding: 0;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 46rem) {
+  .weather-container {
+    flex-direction: row;
+  }
+  weather-icon {
+    padding: 1.5rem 0;
+  }
+}

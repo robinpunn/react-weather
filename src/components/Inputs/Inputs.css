@@ -38,7 +38,7 @@
   color: #fff;
   cursor: pointer;
   margin: 0 0.5rem;
-  transition: all 0.2s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .mag {
@@ -66,14 +66,20 @@
   background-color: inherit;
   border: none;
   cursor: pointer;
-  margin-top: 0.5rem;
+  margin: 0 0.5rem;
+  transition: all 0.5s ease-out;
+}
+
+.temp-button:hover {
+  color: #9200ba;
+  transform: scale(1.25);
 }
 
 .separator {
   color: white;
   font-size: 1.5rem;
   font-weight: 300;
-  margin: 0.5rem;
+  margin: 0 0.5rem;
 }
 
 @media screen and (min-width: 46rem) {
@@ -82,5 +88,8 @@
   }
   .search {
     width: 75%;
+  }
+  .temp {
+    margin-left: 0.75rem;
   }
 }
