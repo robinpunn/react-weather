@@ -1,0 +1,45 @@
+.forecast-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+
+.forecast-title {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.forecast-separator {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.forecast-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forecast-time {
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+
+.forecast-icon {
+  width: 3rem;
+}
+
+.forecast-temp {
+  font-weight: 500;
+}

@@ -6,7 +6,7 @@
   margin: 0 auto;
   padding: 1.25rem 1.5rem;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  background: linear-gradient(to right, #5bcbff, #511dfd);
+  background: linear-gradient(to bottom, #2b0bf8, #511dfd);
 }
 
 .logo {
@@ -19,7 +19,7 @@
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #7b61fbaa);
 }
 
 @keyframes logo-spin {
