@@ -81,13 +81,29 @@
   .weather-container {
     flex-direction: row;
   }
-  weather-icon {
+  .weather-icon {
     padding: 1.5rem 0;
   }
   .range-container {
     font-size: 0.75rem;
+    width: 100%;
+  }
+  .range-icon {
+    margin: 0.35rem;
   }
   .range-separator {
     margin: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 20rem) {
+  .range-container {
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .range-separator {
+    font-weight: 100;
+    margin: 0.15rem;
+    font-size: 0.005rem;
   }
 }

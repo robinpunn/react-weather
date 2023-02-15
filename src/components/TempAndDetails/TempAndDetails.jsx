@@ -46,25 +46,25 @@ function TempAndDetails() {
       {/*rise/set + high/low*/}
       <div className="range-container">
         {/*rise*/}
-        <UilSun />
+        <UilSun className="range-icon" />
         <p className="range-text">
           Rise: <span className="range-value">06:45 AM</span>
         </p>
         <p className="range-separator">|</p>
         {/*set*/}
-        <UilSunset />
+        <UilSunset className="range-icon" />
         <p className="range-text">
           Set: <span className="range-value">07:15 PM</span>
         </p>
         <p className="range-separator">|</p>
         {/*high*/}
-        <UilArrowUp />
+        <UilArrowUp className="range-icon" />
         <p className="range-text">
           High: <span className="range-value">43°</span>
         </p>
         <p className="range-separator">|</p>
         {/*low*/}
-        <UilArrowDown />
+        <UilArrowDown className="range-icon" />
         <p className="range-text">
           Low: <span className="range-value">28°</span>
         </p>

@@ -43,3 +43,14 @@
 .forecast-temp {
   font-weight: 500;
 }
+
+@media screen and (max-width: 20rem) {
+  .forecast-time {
+    font-weight: 100;
+    font-size: 0.5rem;
+  }
+  .forecast-temp {
+    font-weight: 300;
+    font-size: 0.75rem;
+  }
+}
