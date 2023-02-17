@@ -9,11 +9,11 @@ const getWeatherData = (infoType, searchParams) => {
   return fetch(url).then((res) => res.json());
 };
 
-/*get information from apis*/
+/*get information from current weather data api*/
 const formatCurrentWeather = (data) => {
-  /*information from one call api*/
+  /*general information*/
   const {
-    coord: { lon, lat },
+    // coord: { lon, lat },
     main: { temp, feels_like, temp_min, temp_max, humidity },
     name,
     dt,
@@ -22,12 +22,13 @@ const formatCurrentWeather = (data) => {
     wind: { speed },
   } = data;
 
-  /*information from weather api*/
+  /*details, icon*/
   const { main: details, icon } = weather[0];
 
+  /*return variable names*/
   return {
-    lat,
-    lon,
+    // lat,
+    // lon,
     temp,
     feels_like,
     temp_min,
@@ -44,6 +45,24 @@ const formatCurrentWeather = (data) => {
   };
 };
 
+const formatForecastWeather = (data) => {
+  let { list } = data;
+  let newList = [];
+
+  for (let i = 0; i < list.length - 1; i += 8) {
+    newList.push(list[i]);
+  }
+
+  newList.map((d) => {
+    return {
+      title: d.dt_txt,
+      temp: d.main.temp,
+      icon: d.weather[0].icon,
+    };
+  });
+  console.log(newList);
+};
+
 /*input information from api calls and return*/
 const getFormattedWeatherData = async (searchParams) => {
   const formattedCurrentWeather = await getWeatherData(
@@ -51,7 +70,22 @@ const getFormattedWeatherData = async (searchParams) => {
     searchParams
   ).then(formatCurrentWeather);
 
-  return formattedCurrentWeather;
+  // const { lat, lon } = formattedCurrentWeather;
+
+  /*use forecast api*/
+  const formattedForecastWeather = await getWeatherData(
+    "forecast",
+    searchParams
+  ).then(formatForecastWeather);
+
+  return { ...formattedCurrentWeather, ...formattedForecastWeather };
 };
+
+/*format time with luxon*/
+// const formatLocalTime = (
+//   secs,
+//   zone,
+//   format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
+// ) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
 
 export default getFormattedWeatherData;
