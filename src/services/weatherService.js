@@ -1,3 +1,5 @@
+import { DateTime } from "luxon";
+
 /*make call to api*/
 const getWeatherData = (infoType, searchParams) => {
   const url = new URL(import.meta.env.VITE_BASE_URL + "/" + infoType);
@@ -49,18 +51,18 @@ const formatForecastWeather = (data) => {
   let { list } = data;
   let newList = [];
 
-  for (let i = 0; i < list.length - 1; i += 8) {
+  for (let i = 0; i < list.length; i += 8) {
     newList.push(list[i]);
   }
 
-  newList.map((d) => {
+  newList = newList.map((d) => {
     return {
-      title: d.dt_txt,
+      title: formatLocalTime(d.dt, "ccc"),
       temp: d.main.temp,
       icon: d.weather[0].icon,
     };
   });
-  console.log(newList);
+  return newList;
 };
 
 /*input information from api calls and return*/
@@ -69,8 +71,6 @@ const getFormattedWeatherData = async (searchParams) => {
     "weather",
     searchParams
   ).then(formatCurrentWeather);
-
-  // const { lat, lon } = formattedCurrentWeather;
 
   /*use forecast api*/
   const formattedForecastWeather = await getWeatherData(
@@ -82,10 +82,15 @@ const getFormattedWeatherData = async (searchParams) => {
 };
 
 /*format time with luxon*/
-// const formatLocalTime = (
-//   secs,
-//   zone,
-//   format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
-// ) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
+const formatLocalTime = (
+  secs,
+  zone,
+  format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
+) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
+
+const iconURLFromCode = (code) =>
+  `http://openweathermap.org/img/wn/${code}@2x.png`;
 
 export default getFormattedWeatherData;
+
+export { formatLocalTime, iconURLFromCode };
