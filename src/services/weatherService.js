@@ -15,7 +15,7 @@ const getWeatherData = (infoType, searchParams) => {
 const formatCurrentWeather = (data) => {
   /*general information*/
   const {
-    // coord: { lon, lat },
+    coord: { lat, lon },
     main: { temp, feels_like, temp_min, temp_max, humidity },
     name,
     dt,
@@ -26,11 +26,11 @@ const formatCurrentWeather = (data) => {
 
   /*details, icon*/
   const { main: details, icon } = weather[0];
-
+  // console.log("current weather data:", data);
   /*return variable names*/
   return {
-    // lat,
-    // lon,
+    lat,
+    lon,
     temp,
     feels_like,
     temp_min,
@@ -51,7 +51,7 @@ const formatForecastWeather = (data) => {
   let { list } = data;
   let newList = [];
 
-  for (let i = 0; i < list.length; i += 8) {
+  for (let i = 1; i < list.length; i += 8) {
     newList.push(list[i]);
   }
 
@@ -62,7 +62,8 @@ const formatForecastWeather = (data) => {
       icon: d.weather[0].icon,
     };
   });
-  return newList;
+  // console.log("forecast data:", newList);
+  return { newList };
 };
 
 /*input information from api calls and return*/
@@ -72,11 +73,14 @@ const getFormattedWeatherData = async (searchParams) => {
     searchParams
   ).then(formatCurrentWeather);
 
+  const { lat, lon } = formattedCurrentWeather;
+
   /*use forecast api*/
-  const formattedForecastWeather = await getWeatherData(
-    "forecast",
-    searchParams
-  ).then(formatForecastWeather);
+  const formattedForecastWeather = await getWeatherData("forecast", {
+    lat,
+    lon,
+    units: searchParams.units,
+  }).then(formatForecastWeather);
 
   return { ...formattedCurrentWeather, ...formattedForecastWeather };
 };
@@ -84,9 +88,14 @@ const getFormattedWeatherData = async (searchParams) => {
 /*format time with luxon*/
 const formatLocalTime = (
   secs,
-  zone,
   format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
-) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
+) => DateTime.fromSeconds(secs).toFormat(format);
+// with timezone
+// const formatLocalTime = (
+//   secs,
+//   zone,
+//   format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
+// ) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
 
 const iconURLFromCode = (code) =>
   `http://openweathermap.org/img/wn/${code}@2x.png`;

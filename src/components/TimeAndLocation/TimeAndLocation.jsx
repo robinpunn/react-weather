@@ -1,14 +1,16 @@
 import React from "react";
+import { formatLocalTime } from "../../services/weatherService";
 import "./TimeAndLocation.css";
 
-function TimeAndLocation() {
+function TimeAndLocation({ weather: { dt, name, country } }) {
+  // console.log("time and location: ", dt, name, country);
   return (
     <div>
       <div className="time-container">
-        <p className="time">Monday, 13 February 2023 | Local Time: 12:00</p>
+        <p className="time">{formatLocalTime(dt)}</p>
       </div>
       <div className="location-container">
-        <p className="location">Chicago, IL</p>
+        <p className="location">{`${name},${country}`}</p>
       </div>
     </div>
   );
