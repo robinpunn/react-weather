@@ -1,7 +1,9 @@
 import React from "react";
+import { iconURLFromCode } from "../../services/weatherService";
 import "./Forecast.css";
 
-function Forecast({ title }) {
+function Forecast({ title, items }) {
+  console.log("forecast items:", items);
   return (
     <div>
       <div className="forecast-container">
@@ -9,51 +11,18 @@ function Forecast({ title }) {
       </div>
       <hr className="forecast-separator" />
       <div className="forecast-card">
-        <div className="forecast-contents">
-          <p className="forecast-time">4:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            className="forecast-icon"
-          />
-          <p className="forecast-temp">24°</p>
-        </div>
-        <div className="forecast-contents">
-          <p className="forecast-time">4:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            className="forecast-icon"
-          />
-          <p className="forecast-temp">24°</p>
-        </div>
-        <div className="forecast-contents">
-          <p className="forecast-time">4:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            className="forecast-icon"
-          />
-          <p className="forecast-temp">24°</p>
-        </div>
-        <div className="forecast-contents">
-          <p className="forecast-time">4:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            className="forecast-icon"
-          />
-          <p className="forecast-temp">24°</p>
-        </div>
-        <div className="forecast-contents">
-          <p className="forecast-time">4:30 PM</p>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            className="forecast-icon"
-          />
-          <p className="forecast-temp">24°</p>
-        </div>
+        {items.map((item, index) => (
+          <div className="forecast-contents" key={index}>
+            <p className="forecast-time day">{item.title}</p>
+            <p className="forecast-time ">{item.time}</p>
+            <img
+              src={iconURLFromCode(item.icon)}
+              alt=""
+              className="forecast-icon"
+            />
+            <p className="forecast-temp">{`${item.temp.toFixed()}°`}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

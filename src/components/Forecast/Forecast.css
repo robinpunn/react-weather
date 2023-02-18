@@ -23,14 +23,22 @@
   justify-content: space-between;
   color: #fff;
 }
-
+/*cotainer*/
 .forecast-contents {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-
+/*date and time*/
+.day {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.time {
+  padding-top: 0;
+  margin-top: 0;
+}
 .forecast-time {
   font-weight: 300;
   font-size: 0.875rem;

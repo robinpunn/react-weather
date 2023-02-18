@@ -58,6 +58,7 @@ const formatForecastWeather = (data) => {
   newList = newList.map((d) => {
     return {
       title: formatLocalTime(d.dt, "ccc"),
+      time: formatLocalTime(d.dt, "hh a"),
       temp: d.main.temp,
       icon: d.weather[0].icon,
     };
