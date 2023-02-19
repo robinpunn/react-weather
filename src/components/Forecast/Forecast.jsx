@@ -5,7 +5,7 @@ import "./Forecast.css";
 function Forecast({ title, items }) {
   console.log("forecast items:", items);
   return (
-    <div>
+    <div className="container">
       <div className="forecast-container">
         <p className="forecast-title">{title}</p>
       </div>

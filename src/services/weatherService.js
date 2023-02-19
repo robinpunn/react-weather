@@ -18,8 +18,8 @@ const formatCurrentWeather = (data) => {
     coord: { lat, lon },
     main: { temp, feels_like, temp_min, temp_max, humidity },
     name,
-    dt,
-    sys: { country, sunrise, sunset },
+    // dt,
+    // sys: { country, sunrise, sunset },
     weather,
     wind: { speed },
   } = data;
@@ -37,10 +37,10 @@ const formatCurrentWeather = (data) => {
     temp_max,
     humidity,
     name,
-    dt,
-    country,
-    sunrise,
-    sunset,
+    // dt,
+    // country,
+    // sunrise,
+    // sunset,
     speed,
     details,
     icon,
@@ -73,14 +73,13 @@ const getFormattedWeatherData = async (searchParams) => {
     searchParams
   ).then(formatCurrentWeather);
 
-  const { lat, lon } = formattedCurrentWeather;
+  // const { lat, lon } = formattedCurrentWeather;
 
   /*use forecast api*/
-  const formattedForecastWeather = await getWeatherData("forecast", {
-    lat,
-    lon,
-    units: searchParams.units,
-  }).then(formatForecastWeather);
+  const formattedForecastWeather = await getWeatherData(
+    "forecast",
+    searchParams
+  ).then(formatForecastWeather);
 
   return { ...formattedCurrentWeather, ...formattedForecastWeather };
 };

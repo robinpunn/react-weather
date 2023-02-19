@@ -21,6 +21,8 @@
   align-items: center;
   justify-content: center;
   margin: 0;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  background: rgba(39, 38, 38, 0.75);
 }
 
 .location {
@@ -30,6 +32,10 @@
 }
 
 @media screen and (min-width: 46rem) {
+  .location-container {
+    box-shadow: none;
+    background: none;
+  }
   .time {
     font-size: 1.25rem;
   }
