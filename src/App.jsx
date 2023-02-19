@@ -1,14 +1,13 @@
 import "./App.css";
-import Cities from "./components/Cities/Cities";
 import Forecast from "./components/Forecast/Forecast";
 import Inputs from "./components/Inputs/Inputs";
 import TempAndDetails from "./components/TempAndDetails/TempAndDetails";
-import TimeAndLocation from "./components/TimeAndLocation/TimeAndLocation";
+import Location from "./components/Location/Location";
 import getFormattedWeatherData from "./services/weatherService";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [query, setQuery] = useState({ q: "chicago", units: "metric" });
+  const [query, setQuery] = useState({ q: "chicago", units: "imperial" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 
@@ -24,11 +23,10 @@ function App() {
 
   return (
     <div className="App">
-      <Cities />
-      <Inputs />
+      <Inputs setQuery={setQuery} />
       {weather && (
         <>
-          <TimeAndLocation weather={weather} />
+          <Location weather={weather} />
           <TempAndDetails weather={weather} />
           <Forecast title="5 day forecast" items={weather.newList} />
         </>

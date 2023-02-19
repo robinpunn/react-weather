@@ -6,11 +6,8 @@ import {
   UilTemperature,
   UilTear,
   UilWind,
-  UilSun,
-  UilSunset,
 } from "@iconscout/react-unicons";
 import { iconURLFromCode } from "../../services/weatherService";
-import { formatLocalTime } from "../../services/weatherService";
 
 function TempAndDetails({
   weather: {
@@ -20,10 +17,6 @@ function TempAndDetails({
     temp_max,
     humidity,
     name,
-    dt,
-    country,
-    sunrise,
-    sunset,
     speed,
     details,
     icon,
@@ -31,56 +24,38 @@ function TempAndDetails({
 }) {
   return (
     <div>
-      {/*description*/}
-      <div className="details">
-        <p className="details-text">{details}</p>
-      </div>
       {/*weather specifics*/}
       <div className="weather-container">
+        <p className="weather-number">{`${temp.toFixed()}°`}</p>
         <img
           src={iconURLFromCode(icon)}
           alt="weather-icon"
           className="weather-icon"
         />
-        <p className="weather-number">{`${temp.toFixed()}°`}</p>
-        <div className="weather-stats">
-          <div className="weather-stat-icons">
-            <UilTemperature size={18} className="weather-stat-icon" />
-            Real feel:
-            <span className="weather-span">{`${feels_like.toFixed()}°`}</span>
-          </div>
-          <div className="weather-stat-icons">
-            <UilTear size={18} className="weather-stat-icon" />
-            Humidity:
-            <span className="weather-span">{`${humidity}%`}</span>
-          </div>
-          <div className="weather-stat-icons">
-            <UilWind size={18} className="weather-stat-icon" />
-            Wind:
-            <span className="weather-span">{`${speed} mph`}</span>
-          </div>
+      </div>
+      {/*description*/}
+      <div className="details">
+        <p className="details-text">{details}</p>
+      </div>
+      <div className="weather-stats">
+        <div className="weather-stat-icons">
+          <UilTemperature size={18} className="weather-stat-icon" />
+          Real feel:
+          <span className="weather-span">{`${feels_like.toFixed()}°`}</span>
+        </div>
+        <div className="weather-stat-icons">
+          <UilTear size={18} className="weather-stat-icon" />
+          Humidity:
+          <span className="weather-span">{`${humidity}%`}</span>
+        </div>
+        <div className="weather-stat-icons">
+          <UilWind size={18} className="weather-stat-icon" />
+          Wind:
+          <span className="weather-span">{`${speed} mph`}</span>
         </div>
       </div>
-      {/*rise/set + high/low*/}
+      {/*high/low*/}
       <div className="range-container">
-        {/*rise*/}
-        <UilSun className="range-icon" />
-        <p className="range-text">
-          Rise:{" "}
-          <span className="range-value">
-            {formatLocalTime(sunrise, "hh:mm a")}
-          </span>
-        </p>
-        <p className="range-separator">|</p>
-        {/*set*/}
-        <UilSunset className="range-icon" />
-        <p className="range-text">
-          Set:{" "}
-          <span className="range-value">
-            {formatLocalTime(sunset, "hh:mm a")}
-          </span>
-        </p>
-        <p className="range-separator">|</p>
         {/*high*/}
         <UilArrowUp className="range-icon" />
         <p className="range-text">

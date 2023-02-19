@@ -14,7 +14,6 @@ function Forecast({ title, items }) {
         {items.map((item, index) => (
           <div className="forecast-contents" key={index}>
             <p className="forecast-time day">{item.title}</p>
-            <p className="forecast-time ">{item.time}</p>
             <img
               src={iconURLFromCode(item.icon)}
               alt=""
