@@ -27,8 +27,10 @@ function TempAndDetails({
     speed,
     details,
     icon,
+    timezone,
   },
 }) {
+  // console.log("timezone from deets:", timezone);
   return (
     <div>
       {/*description*/}
@@ -68,7 +70,7 @@ function TempAndDetails({
         <p className="range-text">
           Rise:{" "}
           <span className="range-value">
-            {formatLocalTime(sunrise, "hh:mm a")}
+            {formatLocalTime(sunrise, timezone, "hh:mm a")}
           </span>
         </p>
         <p className="range-separator">|</p>
@@ -77,7 +79,7 @@ function TempAndDetails({
         <p className="range-text">
           Set:{" "}
           <span className="range-value">
-            {formatLocalTime(sunset, "hh:mm a")}
+            {formatLocalTime(sunset, timezone, "hh:mm a")}
           </span>
         </p>
         <p className="range-separator">|</p>

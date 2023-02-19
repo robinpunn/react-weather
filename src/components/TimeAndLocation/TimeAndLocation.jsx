@@ -3,7 +3,7 @@ import { formatLocalTime } from "../../services/weatherService";
 import "./TimeAndLocation.css";
 
 function TimeAndLocation({ weather: { dt, name, country } }) {
-  // console.log("time and location: ", dt, name, country);
+  // console.log("time and location: ", timezone);
   return (
     <div>
       <div className="time-container">

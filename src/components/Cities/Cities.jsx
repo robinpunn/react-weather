@@ -1,7 +1,7 @@
 import React from "react";
 import "./Cities.css";
 
-function Cities() {
+function Cities({ setQuery }) {
   const cities = [
     {
       id: 1,
@@ -28,7 +28,11 @@ function Cities() {
   return (
     <div className="cities">
       {cities.map((city) => (
-        <button key={city.id} className="top-button">
+        <button
+          key={city.id}
+          className="top-button"
+          onClick={() => setQuery({ q: city.title, units: "imperial" })}
+        >
           {city.title}
         </button>
       ))}
