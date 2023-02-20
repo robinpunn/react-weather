@@ -11,10 +11,20 @@ const setRandom = () => {
     "Rome",
     "Madrid",
     "Delhi",
+    "New York",
+    "Beijing",
+    "Istanbul",
+    "Seoul",
+    "Shanghai",
+    "Mexico City",
+    "Cairo",
+    "Buenos Aires",
+    "Lagos",
+    "Bogota",
   ];
 
   //random number between 0 and 9
-  const random = Math.floor(Math.random() * 10);
+  const random = Math.floor(Math.random() * 20);
 
   //random city
   const city = cities[random];
