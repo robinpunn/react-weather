@@ -10,10 +10,20 @@ const Layout = ({ children, icon }) => {
   }, [icon]);
 
   function getImagePath(path) {
+    const defaultImagePath = "default.png";
+
+    if (!path) {
+      return defaultImagePath;
+    }
+
+    if (iconToImagePath.hasOwnProperty(icon)) {
+      return path;
+    }
+
     if (process.env.NODE_ENV === "development") {
-      return `./assets/${path}`;
+      return `./assets/${defaultImagePath}`;
     } else {
-      return `${process.env.PUBLIC_URL}/assets/${path}`;
+      return `${process.env.PUBLIC_URL}/assets/${defaultImagePath}`;
     }
   }
 
