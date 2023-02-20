@@ -27,9 +27,10 @@ h1 {
   line-height: 1.1;
 }
 
-@media (max-width: 48rem) {
+@media screen and (max-width: 767px) {
   body {
-    background-image: url('./assets/default-mobile.png');
+    background-position: center center;
+    background-attachment: fixed;
   }
 }
 
