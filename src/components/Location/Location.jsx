@@ -3,10 +3,8 @@ import "./Location.css";
 
 function TimeAndLocation({ weather: { name } }) {
   return (
-    <div>
-      <div className="location-container">
-        <p className="location">{`${name}`}</p>
-      </div>
+    <div className="location-container">
+      <p className="location">{`${name}`}</p>
     </div>
   );
 }

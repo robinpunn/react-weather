@@ -1,7 +1,6 @@
 :root {
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
   font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
 
@@ -17,9 +16,11 @@
 }
 
 body {
-  background-image: url('./assets/default.png');
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {

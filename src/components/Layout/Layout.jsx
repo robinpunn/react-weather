@@ -21,7 +21,7 @@ const Layout = ({ children, icon }) => {
     }
 
     if (process.env.NODE_ENV === "development") {
-      return `./assets/${defaultImagePath}`;
+      return `/assets/${defaultImagePath}`;
     } else {
       return `${process.env.PUBLIC_URL}/assets/${defaultImagePath}`;
     }

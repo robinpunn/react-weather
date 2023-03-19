@@ -5,7 +5,8 @@ import Inputs from "./components/Inputs/Inputs";
 import TempAndDetails from "./components/TempAndDetails/TempAndDetails";
 import Location from "./components/Location/Location";
 import Layout from "./components/Layout/Layout";
-
+import TempNow from "./components/TempNow";
+import WeatherIcon from "./components/WeatherIcon";
 import getFormattedWeatherData from "./services/weatherService";
 import setRandom from "./services/setRandom";
 import { iconToImagePath } from "./services/weatherIcons";
@@ -39,7 +40,14 @@ function App() {
       {weather && (
         <Layout icon={weather.icon}>
           <Inputs setQuery={setQuery} />
-          <Location weather={weather} />
+          <div className="top">
+            <Location weather={weather} />
+            <div className="temp-icon">
+              <TempNow weather={weather} />
+
+              <WeatherIcon weather={weather} />
+            </div>
+          </div>
           <TempAndDetails weather={weather} />
           <Forecast title="5 day forecast" items={weather.newList} />
         </Layout>
