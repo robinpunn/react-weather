@@ -1,5 +1,4 @@
 import React from "react";
-import "./Location.css";
 
 function TimeAndLocation({ weather: { name } }) {
   return (

@@ -3,7 +3,7 @@ import { iconURLFromCode } from "../services/weatherService";
 
 const WeatherIcon = ({ weather: { icon } }) => {
   return (
-    <div className="details">
+    <div className="icon">
       <img
         src={iconURLFromCode(icon)}
         alt="weather-icon"

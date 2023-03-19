@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { UilSearch, UilMapMarker } from "@iconscout/react-unicons";
-import "./Inputs.css";
 
 function Inputs({ setQuery }) {
   const [focus, setFocus] = useState(false);

@@ -1,7 +1,7 @@
 import React from "react";
 
 const TempNow = ({ weather: { temp } }) => {
-  return <p className="weather-number">{`${temp.toFixed()}°`}</p>;
+  return <div className="weather-number">{`${temp.toFixed()}°`}</div>;
 };
 
 export default TempNow;

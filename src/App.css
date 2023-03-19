@@ -1,6 +1,128 @@
 .App {
   max-width: 46rem;
   padding: 2rem;
+  background: rgba(39, 38, 38, 0.25);
+}
+
+/*container*/
+.time-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+/*time*/
+.time {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 100;
+}
+
+/*location*/
+.location-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.location {
+  color: white;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+/*Inputs container*/
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1.25rem 0;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+/*search bar container*/
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  margin-left: 1rem;
+}
+
+/*search bar*/
+/*transparent search bar*/
+.search-bar {
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0.5rem;
+  width: 100%;
+  text-transform: capitalize;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  outline: none;
+}
+
+.search-bar::placeholder {
+  color: #a0aec0;
+  text-transform: lowercase;
+}
+
+/*search bar icons*/
+.search-icon {
+  color: #fff;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: all 0.5s ease-out;
+}
+
+.mag {
+  margin-left: 0.75rem;
+}
+
+.search-icon:hover {
+  color: #9200ba;
+  transform: scale(1.25);
+}
+
+/*temperature container*/
+.temp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+
+/*temperature buttons*/
+.temp-button {
+  color: white;
+  font-size: 1.25rem;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: all 0.5s ease-out;
+}
+
+.temp-button:hover {
+  color: #9200ba;
+  transform: scale(1.25);
+}
+
+.separator {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0 0.5rem;
 }
 
 /*container for temp, location, and icon*/
@@ -18,10 +140,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-width: 18rem;
 }
 
 /*description text container*/
-.details {
+.icon {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,8 +153,12 @@
   padding-bottom: 0.25rem;
   font-size: 1.25rem;
   color: aqua;
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  background: rgba(39, 38, 38, 0.75);
+}
+
+.details-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*temp container*/
@@ -40,8 +167,6 @@
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  background: rgba(39, 38, 38, 0.75);
 }
 /*text:rise/set/high/low*/
 .range-text {
@@ -67,11 +192,9 @@
 .weather-stats {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: start;
   margin-top: 0.5rem;
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  background: rgba(39, 38, 38, 0.75);
 }
 /*container for individual detail*/
 .weather-stat-icons {
@@ -114,9 +237,41 @@
 }
 
 @media screen and (min-width: 46rem) {
-  .details {
+  .App {
+    max-width: 46rem;
+    min-width: 40rem;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    background: rgba(39, 38, 38, 0.75);
+  }
+  .location-container {
     box-shadow: none;
     background: none;
+  }
+  .time {
+    font-size: 1.25rem;
+  }
+  .inputs {
+    flex-direction: row;
+  }
+
+  .search {
+    width: 75%;
+  }
+
+  .temp-icon {
+    min-width: 25rem;
+  }
+
+  .temp {
+    margin-left: 0.75rem;
+  }
+
+  .weather-icon {
+    width: 8rem;
+  }
+
+  .details-container {
+    margin: auto 3rem;
   }
 
   .weather-details {
@@ -130,12 +285,17 @@
   .range-container {
     flex-direction: row;
     font-size: 0.75rem;
-    width: 100%;
     box-shadow: none;
     background: none;
   }
   .range-icon {
     margin: 0.35rem;
+  }
+  .range-text {
+    font-size: 1rem;
+  }
+  .range-value {
+    font-size: 1rem;
   }
   .range-separator {
     margin: 0.5rem;
@@ -143,11 +303,8 @@
   }
 }
 
-@media (min-width: 46rem) {
-  .App {
-    max-width: 46rem;
-    min-width: 40rem;
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    background: rgba(39, 38, 38, 0.75);
+@media screen and (max-width: 20rem) {
+  .time {
+    font-size: 0.7rem;
   }
 }
